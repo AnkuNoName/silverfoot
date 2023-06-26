@@ -1,0 +1,764 @@
+/* Reset and base styles  */
+* {
+	padding: 0px;
+	margin: 0px;
+	border: none;
+}
+
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+}
+
+/* Links */
+
+a, a:link, a:visited  {
+    text-decoration: none;
+}
+
+a:hover  {
+    text-decoration: none;
+}
+
+/* Common */
+
+aside, nav, footer, header, section, main {
+	display: block;
+}
+
+h1, h2, h3, h4, h5, h6, p {
+    font-size: inherit;
+	font-weight: inherit;
+}
+
+ul, ul li {
+	list-style: none;
+}
+
+img {
+	vertical-align: top;
+}
+
+img, svg {
+	max-width: 100%;
+	height: auto;
+}
+
+address {
+  font-style: normal;
+}
+
+/* Form */
+
+input, textarea, button, select {
+	font-family: inherit;
+    font-size: inherit;
+    color: inherit;
+    background-color: transparent;
+}
+
+input::-ms-clear {
+	display: none;
+}
+
+button, input[type="submit"] {
+    display: inline-block;
+    box-shadow: none;
+    background-color: transparent;
+    background: none;
+    cursor: pointer;
+}
+
+input:focus, input:active,
+button:focus, button:active {
+    outline: none;
+}
+
+button::-moz-focus-inner {
+	padding: 0;
+	border: 0;
+}
+
+label {
+	cursor: pointer;
+}
+
+legend {
+	display: block;
+}
+
+a {
+    color: #292A29;
+}
+
+/* CSS start --------------------- */
+
+.container{
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+
+body {
+    background: #292A29;
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+    font-size: 15px;
+    color: antiquewhite;
+}
+
+h1 {
+    font-size: 40px;
+    line-height: 50px;
+    margin-bottom: 50px;
+    font-weight: 600;
+}
+
+
+/* Header container --------------------- */
+
+
+.header {
+    padding: 13px;
+    background-color: antiquewhite;
+}
+
+.header__logo img{
+    width: 50px;
+}
+
+.header__inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo__img {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    gap: 10px;
+}
+
+.header__nav {
+    color: #292A29;
+}
+
+.header__nuv-list {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.nav__list-link {
+    transition: border-bottom .3s ease;
+    border-bottom: 1.5px solid transparent;
+}
+
+.nav__list-link:hover {
+    border-bottom: 1.5px solid #292A29;
+}
+
+.nav__list-link img {
+    width: 33px;
+    height: 33px;
+    opacity: 0.5;
+    transition: opacity .3s ease;
+}
+
+.nav__list-link img:hover {
+    opacity: 1;
+}
+
+.burger__menu {
+    display: none;
+}
+
+.top__content {
+    margin: 140px 0;
+}
+
+.top__text {
+   max-width: 500px;
+   padding-right: 20px;
+}
+
+.top__content-inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 2px solid rgb(95, 92, 89);
+    border-radius: 10px;
+    padding: 20px 20px 40px 20px;
+}
+
+.top__foto img{
+    border-radius: 10px;
+    max-height: 430px;
+}
+
+.top__text-suptitle {
+    font-size: 17px;
+    line-height: 150%;
+    margin-bottom: 50px;
+}
+
+.top__button a{
+    padding: 13px 34px;
+    background-color: #292A29;
+    border-radius: 10px;
+    border: 1px solid antiquewhite;
+    transition: .2s;
+    color: antiquewhite;
+}
+
+.top__button a:hover{
+    color: #292A29;
+    background: antiquewhite;
+}
+
+
+.top__button button:hover{
+    background-color: antiquewhite;
+    color: #292A29;
+}
+
+.history {
+    background-color: #383737;
+    color: #4c4e4c;
+}
+
+.history__top {
+    padding: 50px;
+}
+
+.history__title {
+    text-align: center;
+}
+
+.history__slider {
+  position: relative;
+  padding: 0 60px;
+}
+
+
+.slider__item img {
+    border-radius: 10px;
+    height: 250px;
+    width: 100%;
+    padding: 0 5px;
+}
+
+/* Slider setings--------------- */
+
+.history__container {
+    max-width: 1900px;
+    margin: 0 auto;
+    padding: 0 0;
+}
+
+.slick-list {
+    overflow: hidden;
+}
+/* Лента слайдов */
+.slick-track{
+    display: flex;
+    align-items: center;
+}
+
+/* Стрелка влево */
+.slick-prev{
+    left: 0;
+    background: url('../img/prev-btn.svg') 0 0 / 100% no-repeat;
+}
+/* Стрелка вправо */
+.slick-next{
+    right: 0;
+    background: url('../img/next-btn.svg') 0 0 / 100% no-repeat;
+}
+
+.history__slider .slick-arrow {
+    position: absolute;
+    top: 50%;
+    z-index: 10;
+    margin: -30px 0 0 0;
+    width: 30px;
+    height: 50px;
+    font-size: 0;
+}
+
+.slick-arrow:hover {
+    fill:#FA4946;
+}
+
+
+/* Recommend block */
+
+.recommend {
+    margin: 140px 0;
+}
+
+.recommend__title {
+    font-size: 30px;
+    text-align: center;
+    padding-bottom: 50px;
+}
+
+.recommend__content {
+    padding-top: 100px;
+    padding-bottom: 100px;
+}
+
+.recommend__content {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+.recommend__item {
+    display: flex;
+    justify-content: top;
+    flex-direction: column;
+    
+
+    background: antiquewhite;
+    color: #292A29;
+    width: 25%;
+    border-radius: 10px;
+    align-items: center;
+    padding: 15px;
+    text-align: center;
+}
+
+.recommend_item-foto {
+    width: 100px;
+    height: 100px;
+}
+
+.recommend__item-text {
+    text-align: center;
+    padding-bottom: 10px;
+    font-weight: 600;
+}
+
+.recommend__item p{
+    font-size: 15px;
+    font-weight: 400;
+}
+
+.recommend__border-top,
+.recommend__border-bottom {
+    width: 800px;
+    border: 1px solid antiquewhite;
+    margin: 0 auto;
+}
+
+/* Form block --------------------- */
+
+.form {
+    background: #292A29;
+    margin: 140px 0;
+}
+
+.form__inner {
+    display: flex;
+    justify-content: space-between;
+    padding: 50px 0;
+}
+
+.form__title {
+    font-size: 38px;
+    line-height: 52px;
+    padding-bottom: 20px;
+}
+
+.form__text-content {
+    max-width: 500px;
+    font-weight: 400;
+    font-size: 17px;
+    padding-right: 10px;
+}
+
+.form__input:focus {
+    border: 3px solid antiquewhite;
+}
+
+.form__email {
+    padding: 30px;
+    background: #383737;
+    min-width: 580px;
+    border-radius: 10px;
+    font-weight: 400;
+}
+
+.form__email input {
+    background-color: #292A29;
+    margin-bottom: 18px;
+    width: 100%;
+    padding: 10px 15px;
+    border-radius: 10px;
+}
+
+.form__email textarea {
+    width: 100%;
+    background-color: #292A29;
+    border-radius: 10px;
+    padding: 10px 15px;
+    margin-bottom: 18px;
+    border: none;
+    resize: vertical;
+    min-height: 150px;
+    outline: none;
+}
+
+.form__email textarea:focus {
+    border: 3px solid antiquewhite;
+}
+
+.form__btn {
+    padding: 13px 24px;
+    background: antiquewhite;
+    color: #292A29;
+    border-radius: 10px;
+    transition: .3s;
+}
+
+.form__btn:hover {
+    color: antiquewhite;
+    background: #3f3e3e;
+}
+
+
+.form__contacts {
+    padding-top: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.form__social {
+    display: flex;
+    gap: 20px;
+}
+
+.form__tel-link a{
+    color: #FFF;
+    border-bottom: 1px solid transparent;
+    transition: border-bottom .3s ease;
+    font-size: 14px;
+}
+
+.form__tel-link a:hover{
+    border-bottom: 1px solid #FFF; 
+}
+
+/* Info ------------------- */
+
+.info {
+    background-color: #383737;
+    padding: 140px 0;
+}
+
+.info__title {
+    margin-bottom: 40px;
+    font-size: 30px;
+}
+
+.collapse__box-item{
+    background: #292A29;
+    border-radius: 30px;
+    margin-bottom: 15px;
+}
+
+.collapse__box-title {
+    font-weight: 700;
+    font-size: 22px;
+    line-height: 27px;
+}
+
+.collapse__box-inner {
+    padding: 0px 0px 25px 50px;
+}
+
+.collapse__box-text {
+    padding-top: 12px;
+    padding-right: 120px;
+    max-width: 1250px;
+    display: none;
+    color: #fff;
+}
+
+.collapse__title-box {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    padding-top: 25px;
+}
+
+.collapse__button {
+    background: antiquewhite;
+    min-width: 35px;
+    min-height: 35px;
+    border-radius: 50%;
+    position: relative;
+    margin-right: 35px;
+}
+
+.collapse__title-box .collapse__button::after,
+.collapse__title-box .collapse__button::before {
+    content: "";
+    width: 14px;
+    height: 1px;
+    background-color: #292A29;
+    position: absolute;
+    right: 10px;
+    top: 18px;
+    transition: all .3s ease-in-out;
+}
+
+.collapse__title-box .collapse__button::after {
+    transform: rotate(-90deg);
+}
+
+.active .collapse__button::after,
+.active .collapse__button::before {
+    transform: rotate(0deg);
+}
+
+
+.back-to-top {
+    border-radius: 50%;
+    position: fixed;
+    padding: 10px 12px;
+    right: -150px;
+    bottom: 25px;
+    cursor: pointer;
+    transition: 0.7s all;
+    z-index: 30;
+}
+
+.back-to-top.active {
+    right: 25px;
+    bottom: 25px;
+    transition: 0.7s all;
+}
+
+/* Footer ------------------ */
+
+.footer {
+    color: #292A29;
+    background-color: antiquewhite;
+}
+
+.footer__inner {
+    padding: 15px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer__left {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.footer__list {
+    display: flex;
+    gap: 20px;
+}
+
+.footer__right {
+    display: flex;
+    font-weight: 400;
+    font-size: 12px;
+    gap: 20px;
+}
+
+/* BURGER MENU --------------------- */
+
+.menu__list-item {
+    padding-bottom: 10px;
+}
+
+.modal__list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    padding-top: 50px;
+    padding-bottom: 40px;
+}
+
+.modal__list-link {
+    font-size: 16px;
+    line-height: 19px;
+}
+
+.modal {
+    position: fixed;
+    inset: 0;
+    background-color: rgba(13, 18, 47, 0.5);
+    z-index: 100;
+    cursor: pointer;
+    display: none;
+    left: 0;
+    justify-content: center;
+}
+
+.modal__main {
+    margin-top: 240px;
+    position: relative;
+    width: 292px;
+    height: 320px;
+    background: antiquewhite;
+    border-radius: 10px;
+    padding: 15px;
+    cursor: default;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    font-size: 14px;
+    line-height: 150%;
+}
+
+.modul__close-btn {
+    background-color: transparent;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+}
+
+.modal__list-social {
+    display: flex;
+    gap: 10px;
+}
+
+@media (max-width: 1000px) {
+    h1 {
+        font-size: 25px;
+        line-height: 30px;
+        margin-bottom: 20px;
+        font-weight: 600;
+    }
+    .top__text-suptitle {
+        font-size: 12px;
+        line-height: 150%;
+        margin-bottom: 30px;
+    }
+    .top__text {
+        max-width: 380px;
+        padding-right: 20px;
+    }
+    .top__content {
+        margin: 80px 0;
+    }
+
+    .nav__list-item a {
+        font-size: 12px;
+    }
+    .slider__item img {
+        height: 210px;
+    }
+    .recommend {
+        margin: 80px 0;
+    }
+    .info {
+        padding: 80px 0;
+    }
+    .recommend__content {
+        padding-top: 60px;
+    }
+    .recommend__content {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+    .recommend__item {
+        width: 49%;
+    }
+    .form__inner {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .form__text-content {
+        text-align: center;
+    }
+    .form__inner {
+        padding: 0 0;
+    }
+    .form {
+        margin: 70px 0;
+    }
+    .form__text-content {
+        padding: 30px 20px;
+    }
+}
+
+@media (max-width: 700px) {
+    .recommend__content {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+    .recommend__item {
+        width: 100%;
+    }
+    .recommend__content {
+        padding-top: 30px;
+    }
+    .recommend__border-top, .recommend__border-bottom {
+        width: 200px;
+    }
+    .recommend__content {
+        padding-top: 30px;
+        padding-bottom: 30px;
+    }
+    .recommend {
+        margin: 30px 0;
+    }
+
+    .recommend__title {
+        font-size: 20px;
+    }
+    .form__email {
+        min-width: 340px;
+    }
+
+    .form__text {
+        font-size: 14px;
+    }
+    .history__top {
+        padding: 20px;
+    }
+
+    .history__slider {
+        padding: 0px 40px;
+    }
+    .footer__left {
+        padding-bottom: 12px;
+    }
+    .footer__inner {
+        flex-direction: column;
+    }
+
+    .header__nuv-list {
+        display: none;
+    }
+    .top__foto {
+        display: none;
+    }
+    .top__text {
+        padding: 0;
+    }
+    .burger__menu {
+        display: block;
+    }
+}
